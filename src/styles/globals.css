@@ -1,0 +1,76 @@
+/* globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html body {
+    line-height: 1.6;
+    color: #333;
+  }
+
+  h1 {
+    @apply text-4xl font-bold mb-4;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold mb-3 border-b-2;
+  }
+
+  p {
+    @apply text-base leading-7 mb-4;
+  }
+
+  a {
+    @apply text-blue-500 no-underline hover:underline font-bold;
+  }
+
+  li {
+    @apply list-disc ml-4;
+  }
+
+  code {
+    @apply bg-gray-100 p-1 rounded;
+  }
+}
+
+@layer components {
+  /* Add any custom component styles here */
+}
+
+@layer utilities {
+  /* Add any custom utility styles here */
+}
+
+@media (max-width: 768px) {
+  @layer base {
+    html {
+      @apply text-lg;
+    }
+
+    h1 {
+      @apply text-2xl;
+    }
+
+    h2 {
+      @apply text-xl;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  @layer base {
+    html {
+      @apply text-base;
+    }
+
+    h1 {
+      @apply text-xl;
+    }
+
+    h2 {
+      @apply text-lg;
+    }
+  }
+}
